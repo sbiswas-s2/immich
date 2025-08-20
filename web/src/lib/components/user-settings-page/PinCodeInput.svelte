@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { Label } from '@immich/ui';
   import { onMount } from 'svelte';
 
   interface Props {
@@ -116,7 +115,7 @@
 
 <div class="flex flex-col gap-1">
   {#if label}
-    <Label for={pinCodeInputElements[0]?.id}>{label}</Label>
+    <label class="text-xs text-dark" for={pinCodeInputElements[0]?.id}>{label.toUpperCase()}</label>
   {/if}
   <div class="flex gap-2">
     {#each { length: pinLength } as _, index (index)}
