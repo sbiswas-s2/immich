@@ -9,11 +9,11 @@ String formatAge(DateTime birthDate, DateTime referenceDate) {
   int ageInMonths = _calculateAgeInMonths(birthDate, referenceDate);
 
   if (ageInMonths <= 11) {
-    return "person_age_months".t(args: {'months': ageInMonths.toString()});
+    return "exif_bottom_sheet_person_age_months".t(args: {'months': ageInMonths.toString()});
   } else if (ageInMonths > 12 && ageInMonths <= 23) {
-    return "person_age_year_months".t(args: {'months': (ageInMonths - 12).toString()});
+    return "exif_bottom_sheet_person_age_year_months".t(args: {'months': (ageInMonths - 12).toString()});
   } else {
-    return "person_age_years".t(args: {'years': ageInYears.toString()});
+    return "exif_bottom_sheet_person_age_years".t(args: {'years': ageInYears.toString()});
   }
 }
 
